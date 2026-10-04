@@ -1,4 +1,4 @@
-
+```css
 :root {
     --page-background: #f7f3ea;
     --frame-background: #fffdf8;
@@ -58,6 +58,14 @@ body {
     text-transform: uppercase;
 }
 
+/* Theme selector */
+select {
+    margin-top: 1rem;
+    padding: 0.3rem;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1rem;
+}
+
 /* Main content */
 .mission-content {
     max-width: 600px;
@@ -98,3 +106,43 @@ body {
     max-width: 100%;
     height: auto;
 }
+
+/* =========================
+   DARK THEME
+   ========================= */
+
+body.dark {
+    background-color: #333;
+    color: white;
+}
+
+body.dark .page-frame {
+    background-color: #333;
+    border-color: #666;
+}
+
+body.dark .page-title {
+    color: white;
+}
+
+body.dark .university-name {
+    color: #4da3ff;
+}
+
+body.dark .mission-lead-in {
+    color: #4da3ff;
+}
+
+body.dark .mission-list li::marker {
+    color: #4da3ff;
+}
+
+body.dark .page-header {
+    border-bottom-color: #666;
+}
+
+body.dark select {
+    background-color: #444;
+    color: white;
+}
+```
