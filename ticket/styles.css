@@ -1,0 +1,106 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 5vh 4vw;
+  display: flex;
+  justify-content: center;
+  background: #bfd0da;
+  font-family: Arial, sans-serif;
+  color: #111;
+}
+
+.form-card {
+  width: min(100%, 1100px);
+  padding: 40px;
+  background: white;
+  border-radius: 16px;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 2.5rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+label {
+  font-size: 1.2rem;
+}
+
+input, select {
+  width: 100%;
+  min-height: 54px;
+  padding: 10px;
+  border: 1px solid #777;
+  border-radius: 4px;
+  font-size: 1.1rem;
+}
+
+input:focus, select:focus {
+  outline: 3px solid #3979bd;
+}
+
+button {
+  width: 100%;
+  min-height: 55px;
+  margin-top: 28px;
+  background: #bfd0da;
+  border: 2px solid #333;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #a9c0ce;
+}
+
+.errors {
+  margin-top: 20px;
+  padding: 15px;
+  background: #fff0ee;
+  border-left: 5px solid #b42318;
+  color: #8c1d16;
+}
+
+.ticket {
+  margin-top: 25px;
+  padding: 20px;
+  border: 2px dashed #3979bd;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media (max-width: 650px) {
+  .form-card {
+    padding: 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .full-width {
+    grid-column: auto;
+  }
+}

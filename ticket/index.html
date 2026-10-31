@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Ticket</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script src="ticket.js" defer></script>
+</head>
+<body>
+  <main class="form-card">
+    <h1>Event Ticket</h1>
+
+    <form id="event-form" novalidate>
+      <div class="form-grid">
+        <div class="field">
+          <label for="first-name">First Name</label>
+          <input id="first-name" name="firstName" type="text"
+            minlength="2" maxlength="30"
+            pattern="[A-Za-z][A-Za-z '\-]*" required>
+        </div>
+
+        <div class="field">
+          <label for="last-name">Last Name</label>
+          <input id="last-name" name="lastName" type="text"
+            minlength="2" maxlength="30"
+            pattern="[A-Za-z][A-Za-z '\-]*" required>
+        </div>
+
+        <div class="field full-width">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email"
+            maxlength="80" required>
+        </div>
+
+        <div class="field">
+          <label for="type">Type</label>
+          <select id="type" name="type" required>
+            <option value="">Choose one</option>
+            <option value="student">Student</option>
+            <option value="guest">Guest</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="event-date">Event Date</label>
+          <input id="event-date" name="eventDate"
+            type="date" required>
+        </div>
+
+        <div class="field full-width" id="identity-field" hidden>
+          <label for="identity" id="identity-label">Student I#</label>
+          <input id="identity" name="identity" type="text" required disabled>
+          <small id="identity-help"></small>
+        </div>
+      </div>
+
+      <button type="submit">Create Ticket</button>
+    </form>
+
+    <div id="errors" class="errors" role="alert" hidden></div>
+
+    <section id="ticket" class="ticket" hidden>
+      <h2>Ticket Created!</h2>
+      <p id="ticket-name"></p>
+      <p id="ticket-type"></p>
+      <p id="ticket-date"></p>
+      <p id="ticket-email"></p>
+    </section>
+  </main>
+</body>
+</html>
